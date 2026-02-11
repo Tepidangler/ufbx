@@ -4,7 +4,8 @@ set(CMAKE_CXX_STANDARD 20)
 
 set(UFBX_INC_DIR
         ${CMAKE_CURRENT_SOURCE_DIR}
-)
+CACHE PATH "ufbx include dirs")
+
 project(ufbx)
 
 add_library(ufbx STATIC
@@ -19,4 +20,5 @@ add_library(ufbx STATIC
 )
 
 set_property(TARGET ufbx PROPERTY
+
         MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
